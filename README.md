@@ -1,4 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Amcharts Factory
+
+## Project src structure
+
+- src/components
+- src/constants
+- src/containers
+
+All graphs can be used with graphql.
+The Charts Factory was created to manage graphics using levels.
+Each graph has a manager, who manages the return.
+In case we wanted to use the graphics as an example, it will be sufficient to specify the props: chartType, id, title.
+Otherwise, query execution can be requested.
+In this project there is no configuration to interact with a graphql server.
+
+In doc folder you will find some doc about GraphQL and Amcharts.
+
+
 
 ## Available Scripts
 
