@@ -2,6 +2,7 @@ import React from 'react';
 import ChartsFactory from '../../components/ChartsFactory';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
+import shortid from 'shortid';
 
 const Content = styled.div`
   display: flex;
@@ -17,19 +18,19 @@ class ChartsFactoryPage extends React.Component {
           Amcharts Factory Example
         </Typography>
         <ChartsFactory
-          id={1}
+          id={shortid.generate()}
           chartType={1}
         />
         <ChartsFactory
-          id={7}
+          id={shortid.generate()}
           chartType={7}
         />
         <ChartsFactory
-          id={8}
+          id={shortid.generate()}
           chartType={8}
         />
         <ChartsFactory
-          id={14}
+          id={shortid.generate()}
           chartType={14}
         />
       </Content>
