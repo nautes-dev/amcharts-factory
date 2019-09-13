@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import styled from 'styled-components';
 import { gql } from 'apollo-boost';
-import ChartHeader from '../../ChartHeader';
+
 import { CircularProgress } from '@material-ui/core';
 import PictorialStackedChart from './index';
 
@@ -23,11 +23,7 @@ const RowColTopLabel = styled.div`
   margin: 0 ${props => (props.centerTitle ? 'auto' : '')};
 `;
 
-const RowColTopDx = styled.div`
-  display:flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
+
 
 const PictorialStackedChartContainer = styled.div`
   width: 100%;
@@ -109,17 +105,6 @@ class PictorialStackedChartManager extends Component {
                   <RowColTopLabel color={this.props.color} centerTitle={this.props.centerTitle}>
                     {this.props.label}
                   </RowColTopLabel>
-                  {this.props.sharable && (
-                    <RowColTopDx>
-                      <ChartHeader
-                        sharedChartId={this.props.sharedChartId}
-                        sharedChartTitle={this.props.sharedChartTitle}
-                        homePositions={this.props.homePositions}
-                        wallPositions={this.props.wallPositions}
-                        query={this.props.query}
-                        chartType={this.props.chartType}
-                      />
-                    </RowColTopDx>)}
                 </RowColTop>
                 <ChartContainer>
                   <PictorialStackedChart

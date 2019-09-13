@@ -6,7 +6,7 @@ import { useQuery } from 'react-apollo-hooks';
 import styled from 'styled-components';
 import { gql } from 'apollo-boost';
 import { CircularProgress } from '@material-ui/core';
-import ChartHeader from '../../ChartHeader';
+
 import StackedColumnChart from './index';
 
 let am4core = null;
@@ -31,11 +31,7 @@ const RowColTopLabel = styled.div`
   margin: 0 ${props => (props.centerTitle ? 'auto' : '')};
 `;
 
-const RowColTopDx = styled.div`
-  display:flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
+
 
 const XYChartContainer = styled.div`
   width: 100%;
@@ -115,18 +111,6 @@ function StackedColumnChartManager({
             {label}
           </RowColTopLabel>
         </RowColTop>
-        {sharable && (
-          <RowColTopDx>
-            <ChartHeader
-              sharedChartId={sharedChartId}
-              sharedChartTitle={sharedChartTitle}
-              homePositions={homePositions}
-              wallPositions={wallPositions}
-              query={query}
-              chartType={chartType}
-            />
-          </RowColTopDx>
-        )}
         <ChartContainer>
           <StackedColumnChart
             id={id}

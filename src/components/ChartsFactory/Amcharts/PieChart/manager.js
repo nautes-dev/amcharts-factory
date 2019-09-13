@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import styled from 'styled-components';
 import { gql } from 'apollo-boost';
 import { CircularProgress } from '@material-ui/core';
-import ChartHeader from '../../ChartHeader';
+
 import PieChart from './index';
 import pieChartData from './example';
 
@@ -32,11 +32,7 @@ const RowColTopLabel = styled.div`
   margin: 0 ${props => (props.centerTitle ? 'auto' : '')};
 `;
 
-const RowColTopDx = styled.div`
-  display:flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
+
 
 const PieChartContainer = styled.div`
   width: 100%;
@@ -127,17 +123,6 @@ class PieChartManager extends Component {
                   <RowColTopLabel color={this.props.color} centerTitle={this.props.centerTitle}>
                     {this.props.label}
                   </RowColTopLabel>
-                  {this.props.sharable && (
-                    <RowColTopDx>
-                      <ChartHeader
-                        sharedChartId={this.props.sharedChartId}
-                        sharedChartTitle={this.props.sharedChartTitle}
-                        homePositions={this.props.homePositions}
-                        wallPositions={this.props.wallPositions}
-                        query={this.props.query}
-                        chartType={this.props.chartType}
-                      />
-                    </RowColTopDx>)}
                 </RowColTop>
                 <ChartContainer>
                   <PieChart

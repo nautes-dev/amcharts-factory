@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import styled from 'styled-components';
 import { CircularProgress } from '@material-ui/core';
-import ChartHeader from '../../ChartHeader';
+
 import HorizontalStackedAxesChart from './index';
 
 
@@ -23,11 +23,7 @@ const RowColTopLabel = styled.div`
   margin: 0 ${props => (props.centerTitle ? 'auto' : '')};
 `;
 
-const RowColTopDx = styled.div`
-  display:flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
+
 
 const HorizontalStackedAxesChartContainer = styled.div`
   width: 100%;
@@ -96,17 +92,6 @@ class HorizontalStackedAxesChartManager extends Component {
                   <RowColTopLabel color={this.props.color} centerTitle={this.props.centerTitle}>
                     {this.props.label}
                   </RowColTopLabel>
-                  {this.props.sharable && (
-                    <RowColTopDx>
-                      <ChartHeader
-                        sharedChartId={this.props.sharedChartId}
-                        sharedChartTitle={this.props.sharedChartTitle}
-                        homePositions={this.props.homePositions}
-                        wallPositions={this.props.wallPositions}
-                        query={this.props.query}
-                        chartType={this.props.chartType}
-                      />
-                    </RowColTopDx>)}
                 </RowColTop>
                 <ChartContainer>
                   <HorizontalStackedAxesChart
