@@ -5,17 +5,25 @@ import shortid from 'shortid';
 import Topbar from '../../components/Topbar';
 import Sidebar from '../../components/Sidebar';
 
+const PageContainer = styled.div`
+  width: 100%;
+  height:100%;
+`;
+
 const Content = styled.div`
   display: flex;
   background-color: white;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  flex-direction: column;
 `;
 
 const ChartContainer = styled.div`
   padding-top: 100px;
   width: ${props => props.width};
   height: 500px;
+  flex:1;
+  align-self: flex-end;
 `;
 
 class ChartsFactoryPage extends React.Component {
@@ -38,7 +46,7 @@ class ChartsFactoryPage extends React.Component {
 
   render() {
     return (
-      <Content>
+      <PageContainer>
         <Topbar
           title="Amcharts Factory Example"
           setOpen={open => this.openMenu(open)}
@@ -49,14 +57,15 @@ class ChartsFactoryPage extends React.Component {
           setOpen={open => this.openMenu(open)}
           onClick={(key, value) => this.setProperty(key, value)}
         />
-
-        <ChartContainer width={this.state.openSideMenu ? 'calc(100% - 240px)' : '100%'}>
-          <ChartsFactory
-            id={shortid.generate()}
-            chartType={this.state.chartType}
-          />
-        </ChartContainer>
-      </Content>
+        <Content>
+          <ChartContainer width={this.state.openSideMenu ? 'calc(100% - 240px)' : '100%'}>
+            <ChartsFactory
+              id={shortid.generate()}
+              chartType={this.state.chartType}
+            />
+          </ChartContainer>
+        </Content>
+      </PageContainer>
     )
   }
 }

@@ -10,8 +10,9 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Grain, SportsVolleyball, GraphicEq, BarChart, HomeWork } from '@material-ui/icons';
+import { Grain, SportsVolleyball, GraphicEq, BarChart, HomeWork, Person } from '@material-ui/icons';
 import styled from 'styled-components';
+import shortid from 'shortid';
 
 const drawerWidth = 240;
 
@@ -78,27 +79,32 @@ function Sidebar({ open, setOpen, onClick }) {
       </div>
       <Divider />
       <List>
-        <ListItem button key={1} onClick={() => onClick('chartType', 1)}>
+        <ListItem button key={shortid.generate()} onClick={() => onClick('chartType', 1)}>
           <ListItemIcon><SportsVolleyball /></ListItemIcon>
           <ListItemText primary={"PieChart"} />
         </ListItem>
-        <ListItem button key={7} onClick={() => onClick('chartType', 7)}>
+        <ListItem button key={shortid.generate()} onClick={() => onClick('chartType', 7)}>
           <ListItemIcon><BarChart /></ListItemIcon>
           <ListItemText primary={"XYChart"} />
         </ListItem>
-        <ListItem button key={8} onClick={() => onClick('chartType', 8)}>
+        <ListItem button key={shortid.generate()} onClick={() => onClick('chartType', 8)}>
           <ListItemIcon><GraphicEq /></ListItemIcon>
           <ListItemText primary={"ClusteredBarChart"} />
         </ListItem>
-        <ListItem button key={14} onClick={() => onClick('chartType', 14)}>
+        <ListItem button key={shortid.generate()} onClick={() => onClick('chartType', 14)}>
           <ListItemIcon><Grain /></ListItemIcon>
           <ListItemText primary={"ForceDirectedChart"} />
         </ListItem>
       </List>
       <Divider />
-      <StyledA href="https://www.nautes.com/" ><ListItem button key={1}>
+      <StyledA href="https://www.nautes.com/" ><ListItem button key={shortid.generate()}>
         <ListItemIcon><HomeWork /></ListItemIcon>
         <ListItemText primary={"Nautes S.p.A."} />
+      </ListItem>
+      </StyledA>
+      <StyledA href="https://www.linkedin.com/in/maria-loreta-la-barbera/" ><ListItem button key={shortid.generate()}>
+        <ListItemIcon><HomeWork /></ListItemIcon>
+        <ListItemText primary={"Developer"} />
       </ListItem>
       </StyledA>
     </Drawer>
