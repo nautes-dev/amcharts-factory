@@ -87,8 +87,6 @@ If you don't know the type of chart you need, you can simply ask to server all d
 
 
 
-[https://www.linkedin.com/in/maria-loreta-la-barbera\]]: 	"Developer"
-
 
 
 
