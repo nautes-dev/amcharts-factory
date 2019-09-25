@@ -10,7 +10,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Grain, SportsVolleyball, GraphicEq, BarChart, HomeWork, Person } from '@material-ui/icons';
+import { Grain, SportsVolleyball, GraphicEq, BarChart, HomeWork } from '@material-ui/icons';
 import styled from 'styled-components';
 import shortid from 'shortid';
 

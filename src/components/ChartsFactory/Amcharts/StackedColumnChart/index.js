@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -11,35 +12,6 @@ if (process.browser) {
   am4themesAnimated = require('@amcharts/amcharts4/themes/animated');
   am4core.useTheme(am4themesAnimated.default);
 }
-
-// Add data
-const exData = [{
-  label: 'Ambiente',
-  valueMedium: 2.5,
-  valueNo: 2.5,
-  valueYes: 2.1
-}, {
-  label: 'Sicurezza',
-  valueMedium: 2.6,
-  valueNo: 2.7,
-  valueYes: 2.2
-}, {
-  label: 'Sburocratizzazione',
-  valueMedium: 2.8,
-  valueNo: 2.9,
-  valueYes: 2.4
-},
-{
-  label: 'Ambiente1',
-  valueMedium: 2.5,
-  valueNo: 2.5,
-  valueYes: 2.1
-}, {
-  label: 'Sicurezza1',
-  valueMedium: 2.6,
-  valueNo: 2.7,
-  valueYes: 2.2
-}];
 
 const createSeries = (field, name, chart) => {
 
@@ -66,7 +38,6 @@ function StackedColumnChart({ data, id, backgroundColor, color }) {
     const c = am4core.create(`div${id}`, am4charts.XYChart);
 
     c.data = data;
-    //c.data = exData;
 
     const categoryAxis = c.yAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = 'label';
