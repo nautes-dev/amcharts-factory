@@ -62,9 +62,9 @@ const GET_DATA = `
 
 ```jsx
 <XYChartManager
-	label="Aziende associate negli anni"
-	id="xyChart1"
-	query={GET_DATA}
+  label="Aziende associate negli anni"
+  id="xyChart1"
+  query={GET_DATA}
 />
 ```
 
@@ -78,9 +78,9 @@ If you don't know the type of chart you need, you can simply ask to server all d
 */
 
 <XYChartManager
-	label={data.label}
-	id={shortid.generate()}
-	query={data.query}
+  label={data.label}
+  id={shortid.generate()}
+  query={data.query}
   chartType={data.chartType}
 />
 ```
