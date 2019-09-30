@@ -13,7 +13,7 @@ In case we wanted to use the graphics as an example, it will be sufficient to sp
 Otherwise, query execution can be requested.
 In this project there is no configuration to interact with a graphql server.
 
-In doc folder you will find some doc about GraphQL and Amcharts.
+In this readme you will find some doc about GraphQL and Amcharts.
 
 ## Getting Started 
 
@@ -81,7 +81,7 @@ If you don't know the type of chart you need, you can simply ask to server all d
 	label={data.label}
 	id={shortid.generate()}
 	query={data.query}
-    chartType={data.chartType}
+  chartType={data.chartType}
 />
 ```
 
